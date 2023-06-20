@@ -40,29 +40,22 @@ public class Pa2U2P4RaJoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Ciudadano ciud = new Ciudadano();
-		ciud.setNombre("Jimmy");
-		ciud.setApellido("Ortega");
-		ciud.setCedula("0000000");
+		Hotel hote = new Hotel();
+		hote.setDireccion("Carapungo");
+		hote.setNombre("Hotel");
 		
-		//this.ciudadanoService.crear(ciud);
+		Habitacion habi = new Habitacion();
+		habi.setHotel(hote);
+		habi.setNumero("1b");
+		habi.setValor(new BigDecimal(150));
 		
-		Ciudadano ciud2 = new Ciudadano();
-		ciud2.setNombre("Roberto");
-		ciud2.setApellido("Aguas");
-		ciud2.setCedula("0000000");
+		this.habitacionService.crear(habi);
 		
-		this.ciudadanoService.crear(ciud2);
+		this.habitacionService.modificar(habi);
 		
+		this.habitacionService.buscar(1);
 		
-		
-		Empleado empl = new Empleado();
-		empl.setCargo("AB");
-		empl.setSueldo(new BigDecimal(200));
-		empl.setCiudadano(ciud2);
-		ciud.setEmpleado(empl);
-		
-		this.empleadoService.agregar(empl);
+		this.habitacionService.eliminar(1);
 		
 	
 	
