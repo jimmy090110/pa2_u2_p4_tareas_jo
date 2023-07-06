@@ -47,4 +47,10 @@ public class ProfesorServiceImpl implements ProfesorService{
 		return this.profesorRepository.seleccionarPorNombre(nombre);
 	}
 
+	@Override
+	public Profesor seleccionarProfesorDinamico(String cedula, Integer edad, BigDecimal sueldo) {
+		// TODO Auto-generated method stub
+		return this.profesorRepository.seleccionarProfesorDinamico(cedula, edad, sueldo);
+	}
+
 }

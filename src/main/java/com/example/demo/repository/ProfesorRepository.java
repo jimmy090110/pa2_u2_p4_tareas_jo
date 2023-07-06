@@ -19,6 +19,8 @@ public interface ProfesorRepository {
 
 	public List<Profesor>seleccionarPorNombre(String nombre);
 	
+	public Profesor seleccionarProfesorDinamico(String cedula, Integer edad, BigDecimal sueldo);
+	
 	 
 
 }

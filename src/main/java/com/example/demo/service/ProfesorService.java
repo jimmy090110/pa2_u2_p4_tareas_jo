@@ -19,4 +19,5 @@ public void insertar(Profesor profesor);
 
 	public List<Profesor>seleccionarPorNombre(String nombre);
 
+	public Profesor seleccionarProfesorDinamico(String cedula, Integer edad, BigDecimal sueldo);
 }
