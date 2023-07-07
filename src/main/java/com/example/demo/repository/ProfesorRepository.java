@@ -21,6 +21,10 @@ public interface ProfesorRepository {
 	
 	public Profesor seleccionarProfesorDinamico(String cedula, Integer edad, BigDecimal sueldo);
 	
+	public int eliminar(String nombre);
+	
+	public int actualizarPorNombre(String nombre, Integer edad);
+	
 	 
 
 }

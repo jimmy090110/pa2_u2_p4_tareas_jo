@@ -53,4 +53,16 @@ public class ProfesorServiceImpl implements ProfesorService{
 		return this.profesorRepository.seleccionarProfesorDinamico(cedula, edad, sueldo);
 	}
 
+	@Override
+	public int eliminar(String nombre) {
+		
+		return this.profesorRepository.eliminar(nombre);
+	}
+
+	@Override
+	public int actualizarPorNombre(String nombre, Integer edad) {
+		// TODO Auto-generated method stub
+		return this.profesorRepository.actualizarPorNombre(nombre, edad);
+	}
+
 }

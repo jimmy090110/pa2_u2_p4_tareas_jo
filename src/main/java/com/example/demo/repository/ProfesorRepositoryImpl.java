@@ -93,4 +93,21 @@ public class ProfesorRepositoryImpl implements ProfesorRepository {
 			return myQueryFinal.getSingleResult();
 	}
 
+	@Override
+	public int eliminar(String nombre) {
+		Query myQuery = this.entityManager.createQuery("DELETE From Profesor p WHERE p.nombre = :datoNombre" );
+		myQuery.setParameter("datoNombre", nombre);
+		
+		return myQuery.executeUpdate();
+		
+	}
+
+	@Override
+	public int actualizarPorNombre(String nombre, Integer edad) {
+		Query myQuery = this.entityManager.createQuery("UPDATE Profesor p Set p.nombre = :datoNombre WHERE p.edad =:datoEdad ");
+		myQuery.setParameter("datoNombre", nombre);
+		myQuery.setParameter("datoEdad", edad);
+		return myQuery.executeUpdate();
+	}
+
 }

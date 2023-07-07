@@ -1,11 +1,7 @@
 package com.example.demo;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -37,12 +33,19 @@ public class Pa2U2P4RaJoApplication implements CommandLineRunner {
 		prof.setNombre("Ignacio");
 		prof.setSueldo(new BigDecimal(500));
 		
-		this.profesorService.insertar(prof);
+		
+		
+		
+		
+		//this.profesorService.insertar(prof);
 		
 		//El sueldo aumenta un 50% si pasa la edad de 40 años
-		System.out.println("El sueldo es: "+this.profesorService.seleccionarProfesorDinamico("11111", 45, new BigDecimal(500)));
+		//System.out.println("El sueldo es: "+this.profesorService.seleccionarProfesorDinamico("11111", 45, new BigDecimal(500)));
 		
 		
+		//System.out.println("Se actualizado: "+this.profesorService.actualizarPorNombre("Jimmy", 45));
+		
+		System.out.println(this.profesorService.eliminar("Jimmy"));
 		
 		
 		
